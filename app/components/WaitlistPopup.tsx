@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import pattern from '../../public/assets/pattern.svg';
-import tick from '../../public/assets/tick.svg';
-import closeIcon from '../../public/assets/close.svg';
-import ireland from '../../public/assets/ireland.svg';
+const pattern = "/assets/pattern.svg";
+const tick = "/assets/tick.svg";
+const closeIcon = "/assets/close.svg";
+const ireland = "/assets/ireland.svg";
 
 interface WaitlistPopupProps {
   onClose: () => void;
