@@ -1,103 +1,67 @@
+"use client";
+
 import Image from "next/image";
+import React, { useState } from 'react';
+import WaitlistPopup from './components/WaitlistPopup';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [showPopup, setShowPopup] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
+  return (
+    <main className="flex min-h-screen flex-col items-center" style={{backgroundColor: '#66BB6A'}}>
+      <div className="w-full bg-[url('/assets/bg.svg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-4 pb-6">
+        <h1 className="text-base font-bold text-center font-cooper-bt-medium pt-10" style={{color: '#0E1B22'}}>koottu.</h1>
+        <img src="/assets/zig-zag.svg" alt="Zigzag Line" style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))'}} className="mt-2 mb-6 align-center scale-109"/>
+        <p className="text-[26px] font-bold text-center leading-tight font-cooper-bt-medium mb-2" style={{color: '#0E1B22'}}>
+          Rent your room to <br />
+          Malayali students, <span className="italic underline font-cooper-bt-medium">easily</span>.
+        </p>
+        <p className="text-[14px] text-center opacity-60 font-geist-regular" style={{color: '#0E1B22'}}>
+          Verified students. Faster fills. Less hassle.
+        </p>
+        <p className="w-38 h-10 bg-white text-base font-geist-semibold transition duration-300 flex items-center justify-center mt-6 mb-2" 
+           style={{
+             color: '#00C750',
+             borderRadius: '14px',
+             boxShadow: '0 3px 7px 0 rgba(0, 0, 0, 0.15), 0 0 21.6px 0 #00FF6F'
+           }}
+           onClick={openPopup}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Join the waitlist
+        </p>
+        <p className="text-center  text-[10px] text-white font-geist-regular">
+          <span className="dashed-underline mr-1">Verified tenants</span> <span className="mx-0.2">•</span> <span className="dashed-underline ml-1">Fast response time</span>
+        </p>
+      </div>
+      <div className="w-full flex flex-col items-center py-10 px-4" style={{backgroundColor: '#DEEDE0'}}>
+        <h2 className="text-3xl font-bold mb-4 font-cooper-bt-light text-[18px]" style={{color: '#0E1B22'}}>How it works</h2>
+          <div className="flex flex-col items-end text-center gap-5">
+            <img src="/assets/1.svg" alt="Step 1" className="w-auto h-57" />
+            <img src="/assets/2.svg" alt="Step 2" className="w-auto h-57" />
+            <img src="/assets/3.svg" alt="Step 3" className="w-auto h-61" />        
+          </div>
+      </div>
+
+      <div className="w-full bg-[url('/assets/bg.svg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-4 pb-6">
+        <h3 className="text-[18px] font-cooper-bt-light-italic text-[#0E1B22] pt-[18px]">Interested?</h3>
+        <p className="w-38 h-10 bg-white text-base font-geist-semibold transition duration-300 flex items-center justify-center mt-3 mb-4" 
+           style={{
+             color: '#00C750',
+             borderRadius: '14px',
+             boxShadow: '0 3px 7px 0 rgba(0, 0, 0, 0.15), 0 0 21.6px 0 #00FF6F'
+           }}
+           onClick={openPopup}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          Join the waitlist
+        </p>
+        <img src="/assets/zig-zag.svg" alt="Zigzag Line" style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))', stroke: '#ffffff'}} className="scale-109"/>
+        <p className="text-sm text-[#0E1B22] font-cooper-bt-light mt-3">koottu © 2025</p>
+        <p className="text-sm text-[#0E1B22] font-cooper-bt-light flex items-center gap-1 mb-4">Made with <img src="/assets/love.svg" alt="love" className="w-4 h-4 inline-block pt-0.5" /> in Ireland</p>
+      </div>
+      {showPopup && <WaitlistPopup onClose={closePopup} />}
+    </main>
   );
 }

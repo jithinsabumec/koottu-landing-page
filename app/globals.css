@@ -1,7 +1,109 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Cooper Bt Medium';
+  src: url('/assets/cooper-bt-medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Bold';
+  src: url('/assets/CooperLtBTBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Light';
+  src: url('/assets/cooper-lt-bt/CooperLtBTLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cooper Light Italic';
+  src: url('/assets/cooper-lt-bt/CooperLtBTLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geist';
+  src: url('/assets/Geist/Geist-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500; /* Medium weight for Geist */
+  font-style: normal;
+}
+
+.font-cooper-bt-light {
+  font-family: 'Cooper Light', sans-serif;
+}
+
+.font-cooper-bt-light-italic {
+  font-family: 'Cooper Light Italic', sans-serif;
+}
+
+.font-cooper-bt-medium {
+  font-family: 'Cooper Bt Medium', sans-serif;
+}
+
+.font-cooper-bold {
+  font-family: 'Cooper Bold', sans-serif;
+}
+
+.font-geist-regular {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400; /* Regular weight for Geist */
+}
+
+.font-geist-semibold {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600; /* Semibold weight for Geist */
+}
+
+.font-geist-medium {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500; /* Medium weight for Geist */
+}
+
+.dashed-underline {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 4px; /* Adjust this value for the desired gap */
+}
+
+.radio-custom {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #90A5BA; /* Unselected border color */
+  display: inline-block;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  background-color: white; /* Ensure it's white inside for the unselected state and when acting as the outer ring of the selected state */
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom {
+  border-color: #0E1B22; /* Outer border when selected */
+  background-color: white; /* Explicitly set to white for the gap */
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0E1B22; /* Inner circle color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@tailwind utilities;
+
 :root {
-  --background: #ffffff;
+  --background: #DEEDE0;
   --foreground: #171717;
 }
 
@@ -14,7 +116,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #DEEDE0;
     --foreground: #ededed;
   }
 }
@@ -22,5 +124,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
