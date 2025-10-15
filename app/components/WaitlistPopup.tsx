@@ -34,7 +34,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
   const getDescriptionText = (value: string): string => {
     const descriptionMap: { [key: string]: string } = {
       'owner': 'I own a home and am looking to rent out a room.',
-      'tenant': "I&apos;m a tenant and would like to sublet a room.",
+      'tenant': "I am a tenant and would like to sublet a room.",
       'manager': 'I help manage or list properties for others.',
       'learn': 'I just want to learn more about this.'
     };
@@ -300,7 +300,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <span className="radio-custom mr-2 mt-[3px]"></span>
-                <span className="text-sm font-geist-regular text-[#0E1B22]">I'm a tenant and would like to sublet a room.</span>
+                <span className="text-sm font-geist-regular text-[#0E1B22]">I am a tenant and would like to sublet a room.</span>
               </label>
               <label className="flex items-start radio-label">
                 <input 
