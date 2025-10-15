@@ -34,7 +34,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
   const getDescriptionText = (value: string): string => {
     const descriptionMap: { [key: string]: string } = {
       'owner': 'I own a home and am looking to rent out a room.',
-      'tenant': "I am a tenant and would like to sublet a room.",
+      'tenant': "I&apos;m a tenant and would like to sublet a room.",
       'manager': 'I help manage or list properties for others.',
       'learn': 'I just want to learn more about this.'
     };
@@ -136,13 +136,13 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
         }}>
           {/* Pattern background at top */}
           <div className="absolute top-0 left-0 right-0 flex justify-center">
-            <img src={pattern} alt="" className="w-full h-auto" />
+            <Image src={pattern} alt="" className="w-full h-auto" />
           </div>
           
           <div className="relative p-8 text-center">
             {/* Success checkmark */}
             <div className="flex justify-center">
-              <img src={tick} alt="Success" className="w-32 h-32" />
+              <Image src={tick} alt="Success" className="w-32 h-32" />
             </div>
 
             {/* Success text */}
@@ -150,7 +150,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
               You have successfully<br />joined the waitlist!
             </h2>
             <p className="text-[16px] text-[#0E1B22] font-geist-medium mb-9">
-              We'll get in touch with you soon.
+              We&apos;ll get in touch with you soon.
             </p>
 
             {/* Action buttons */}
@@ -193,7 +193,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
                 className="text-[#0E1B22] opacity-60 hover:opacity-100 w-6 h-6 flex items-center justify-center"
                 aria-label="Close"
               >
-                <img src={closeIcon} alt="Close" className="w-[23px] h-[23px]" />
+                <Image src={closeIcon} alt="Close" className="w-[23px] h-[23px]" />
               </button>
             </div>
           </div>
@@ -218,7 +218,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
             <div className="flex gap-1 w-full">
               <div className="flex-shrink-0 flex items-center bg-white px-3 font-geist-regular text-[#0E1B22] h-[38px] border border-[#E1E8F1] rounded-[8px]"
                    style={{ boxShadow: '0px 3px 14px 0px #0000000A' }}>
-                <img src={ireland} alt="Ireland Flag" className="w-[18px] h-[18px] mr-2" /> <span className='text-[14px] text-[#0E1B22]'>+353</span>
+                <Image src={ireland} alt="Ireland Flag" className="w-[18px] h-[18px] mr-2" /> <span className='text-[14px] text-[#0E1B22]'>+353</span>
               </div>
               <div className="flex-grow">
                 <input
@@ -343,7 +343,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
           </div>
 
           <p className="text-xs text-[#0E1B22] opacity-60 font-geist-regular mb-4">
-            We'll only use your details to notify you about verified student matches.
+            We&apos;ll only use your details to notify you about verified student matches.
           </p>
 
           {submitMessage && submitMessage.type === 'error' && (
