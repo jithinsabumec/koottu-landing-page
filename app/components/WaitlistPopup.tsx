@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const pattern = "/assets/pattern.svg";
-const tick = "/assets/tick.svg";
-const closeIcon = "/assets/close.svg";
-const ireland = "/assets/ireland.svg";
+const images = {
+  pattern: {
+    src: "/assets/pattern.svg",
+    width: 450,
+    height: 120
+  },
+  tick: {
+    src: "/assets/tick.svg",
+    width: 128,
+    height: 128
+  },
+  closeIcon: {
+    src: "/assets/close.svg",
+    width: 23,
+    height: 23
+  },
+  ireland: {
+    src: "/assets/ireland.svg",
+    width: 18,
+    height: 18
+  }
+};
 
 interface WaitlistPopupProps {
   onClose: () => void;
@@ -136,13 +154,25 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
         }}>
           {/* Pattern background at top */}
           <div className="absolute top-0 left-0 right-0 flex justify-center">
-            <Image src={pattern} alt="" className="w-full h-auto" />
+            <Image 
+              src={images.pattern.src}
+              alt=""
+              width={images.pattern.width}
+              height={images.pattern.height}
+              className="w-full h-auto"
+            />
           </div>
           
           <div className="relative p-8 text-center">
             {/* Success checkmark */}
             <div className="flex justify-center">
-              <Image src={tick} alt="Success" className="w-32 h-32" />
+              <Image 
+                src={images.tick.src}
+                alt="Success"
+                width={images.tick.width}
+                height={images.tick.height}
+                className="w-32 h-32"
+              />
             </div>
 
             {/* Success text */}
@@ -193,7 +223,13 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
                 className="text-[#0E1B22] opacity-60 hover:opacity-100 w-6 h-6 flex items-center justify-center"
                 aria-label="Close"
               >
-                <Image src={closeIcon} alt="Close" className="w-[23px] h-[23px]" />
+                <Image 
+                  src={images.closeIcon.src}
+                  alt="Close"
+                  width={images.closeIcon.width}
+                  height={images.closeIcon.height}
+                  className="w-[23px] h-[23px]" 
+                />
               </button>
             </div>
           </div>
@@ -218,7 +254,14 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
             <div className="flex gap-1 w-full">
               <div className="flex-shrink-0 flex items-center bg-white px-3 font-geist-regular text-[#0E1B22] h-[38px] border border-[#E1E8F1] rounded-[8px]"
                    style={{ boxShadow: '0px 3px 14px 0px #0000000A' }}>
-                <Image src={ireland} alt="Ireland Flag" className="w-[18px] h-[18px] mr-2" /> <span className='text-[14px] text-[#0E1B22]'>+353</span>
+                <Image 
+                  src={images.ireland.src}
+                  alt="Ireland Flag"
+                  width={images.ireland.width}
+                  height={images.ireland.height}
+                  className="w-[18px] h-[18px] mr-2" 
+                /> 
+                <span className='text-[14px] text-[#0E1B22]'>+353</span>
               </div>
               <div className="flex-grow">
                 <input
