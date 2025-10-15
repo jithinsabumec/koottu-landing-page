@@ -14,7 +14,15 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center" style={{backgroundColor: '#66BB6A'}}>
       <div className="w-full bg-[url('/assets/bg.svg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-4 pb-6">
         <h1 className="text-base font-bold text-center font-cooper-bt-medium pt-10" style={{color: '#0E1B22'}}>koottu.</h1>
-        <img src="/assets/zig-zag.svg" alt="Zigzag Line" style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))'}} className="mt-2 mb-6 align-center scale-109"/>
+        <Image 
+          src="/assets/zig-zag.svg" 
+          alt="Zigzag Line" 
+          width={1920}
+          height={1080}
+          priority
+          className="mt-2 mb-6 align-center scale-109"
+          style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))'}}
+        />
         <p className="text-[26px] font-bold text-center leading-tight font-cooper-bt-medium mb-2" style={{color: '#0E1B22'}}>
           Rent your room to <br />
           Malayali students, <span className="italic underline font-cooper-bt-medium">easily</span>.
@@ -39,9 +47,27 @@ export default function Home() {
       <div className="w-full flex flex-col items-center py-10 px-4" style={{backgroundColor: '#DEEDE0'}}>
         <h2 className="text-3xl font-bold mb-4 font-cooper-bt-light text-[18px]" style={{color: '#0E1B22'}}>How it works</h2>
           <div className="flex flex-col items-end text-center gap-5">
-            <img src="/assets/1.svg" alt="Step 1" className="w-auto h-57" />
-            <img src="/assets/2.svg" alt="Step 2" className="w-auto h-57" />
-            <img src="/assets/3.svg" alt="Step 3" className="w-auto h-61" />        
+            <Image 
+              src="/assets/1.svg" 
+              alt="Step 1" 
+              width={1920}
+              height={1080}
+              className="w-auto h-57"
+            />
+            <Image 
+              src="/assets/2.svg" 
+              alt="Step 2" 
+              width={1920}
+              height={1080}
+              className="w-auto h-57"
+            />
+            <Image 
+              src="/assets/3.svg" 
+              alt="Step 3" 
+              width={1920}
+              height={1080}
+              className="w-auto h-61"
+            />        
           </div>
       </div>
 
@@ -57,9 +83,17 @@ export default function Home() {
         >
           Join the waitlist
         </p>
-        <img src="/assets/zig-zag.svg" alt="Zigzag Line" style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))', stroke: '#ffffff'}} className="scale-109"/>
+        <Image 
+          src="/assets/zig-zag.svg" 
+          alt="Zigzag Line" 
+          width={1920}
+          height={1080}
+          priority
+          className="scale-109"
+          style={{filter: 'drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15))', stroke: '#ffffff'}}
+        />
         <p className="text-sm text-[#0E1B22] font-cooper-bt-light mt-3">koottu © 2025</p>
-        <p className="text-sm text-[#0E1B22] font-cooper-bt-light flex items-center gap-1 mb-4">Made with <img src="/assets/love.svg" alt="love" className="w-4 h-4 inline-block pt-0.5" /> in Ireland</p>
+        <p className="text-sm text-[#0E1B22] font-cooper-bt-light flex items-center gap-1 mb-4">Made with <Image src="/assets/love.svg" alt="love" width={16} height={16} className="w-4 h-4 inline-block pt-0.5" /> in Ireland</p>
       </div>
       {showPopup && <WaitlistPopup onClose={closePopup} />}
     </main>
