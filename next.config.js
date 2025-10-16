@@ -9,6 +9,11 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    // Add resolution for .js files
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', ...config.resolve.extensions]
+    return config
+  }
 }
 
 module.exports = nextConfig

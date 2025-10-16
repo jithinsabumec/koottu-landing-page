@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'cooper-bt': ['var(--font-cooper-bt)'],
+        'cooper': ['var(--font-cooper)'],
         'geist': ['var(--font-geist)'],
       },
     },

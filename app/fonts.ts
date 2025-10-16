@@ -1,33 +1,37 @@
 import localFont from 'next/font/local'
 
-export const cooperBT = localFont({
+export const cooper = localFont({
   src: [
     {
-      path: '../public/fonts/CooperBT-Medium.woff2',
+      path: './fonts/CooperLtBTLight.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CooperLtBTLightItalic.woff2',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: './fonts/cooper-bt-medium.woff2',
       weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CooperLtBTBold.woff2',
+      weight: '700',
       style: 'normal',
     }
   ],
-  variable: '--font-cooper-bt'
+  variable: '--font-cooper',
+  display: 'swap',
+  preload: true,
 })
 
 export const geist = localFont({
-  src: [
-    {
-      path: '../public/fonts/Geist-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Geist-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/Geist-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-geist'
+  src: './fonts/Geist-VariableFont_wght.woff2',
+  variable: '--font-geist',
+  fallback: ['system-ui', 'arial'],
+  display: 'swap',
+  preload: true,
 })

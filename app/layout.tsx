@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { cooperBT, geist } from './fonts'
-import "./globals.css";
+import { cooper, geist } from './fonts'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: "koottu - Landing Page",
@@ -9,19 +9,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" className={`${cooperBT.variable} ${geist.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
-      </head>
-      <body>
-        {children}
-      </body>
+    <html lang="en" className={`${cooper.variable} ${geist.variable}`}>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
