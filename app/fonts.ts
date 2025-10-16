@@ -34,4 +34,5 @@ export const geist = localFont({
   fallback: ['system-ui', 'arial'],
   display: 'swap',
   preload: true,
+  weight: '100 900', // Specify the weight range supported by the variable font
 })

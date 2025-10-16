@@ -163,7 +163,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
             />
           </div>
           
-          <div className="relative p-8 text-center">
+          <div className="relative pt-6 px-8 pb-8 text-center">
             {/* Success checkmark */}
             <div className="flex justify-center">
               <Image 
@@ -176,7 +176,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
             </div>
 
             {/* Success text */}
-            <h2 className="text-[24px] font-cooper-bt-medium text-[#1CC969] mb-4 leading-tight">
+            <h2 className="text-[24px] font-cooper font-medium text-[#1CC969] mb-4 leading-tight">
               You have successfully<br />joined the waitlist!
             </h2>
             <p className="text-[16px] text-[#0E1B22] font-geist-medium mb-9">
@@ -196,7 +196,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
               </button>
               <button
                 onClick={onClose}
-                className="flex items-center gap-1 px-3 py-3 h-10 w-25 bg-white text-[#575757] border-2 border-[#575757] rounded-[14px] font-geist-semibold text-[16px] hover:bg-gray-50 transition duration-300 shadow-md"
+                className="flex items-center gap-1 px-3 py-3 h-10 w-25 bg-white text-[#7a7a7a] border-1 border-[#7a7a7a] rounded-[14px] font-geist-semibold text-[16px] hover:bg-gray-50 transition duration-300 shadow-md"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -216,7 +216,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
       <div className="bg-white rounded-[16px] shadow-lg w-full max-w-[400px] my-auto">
         <div className="p-6">
           <div className="relative mb-6">
-            <h2 className="text-[18px] font-bold font-cooper-bt-medium text-[#0E1B22] text-center">Almost there!</h2>
+            <h2 className="text-[18px] font-cooper font-medium text-[#0E1B22] text-center">Almost there!</h2>
             <div className="absolute right-0 top-1/2 -translate-y-1/2">
               <button 
                 onClick={onClose} 

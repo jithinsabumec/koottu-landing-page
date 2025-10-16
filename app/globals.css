@@ -100,7 +100,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 @tailwind utilities;
 @tailwind utilities;
 
@@ -119,7 +118,20 @@
   font-family: var(--font-geist);
 }
 
-@tailwind utilities;
+.geist-regular {
+  font-family: var(--font-geist);
+  font-weight: 400; /* Regular */
+}
+
+.geist-medium {
+  font-family: var(--font-geist);
+  font-weight: 500; /* Medium */
+}
+
+.geist-semibold {
+  font-family: var(--font-geist);
+  font-weight: 600; /* SemiBold */
+}
 
 :root {
   --background: #DEEDE0;

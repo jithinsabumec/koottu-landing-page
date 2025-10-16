@@ -27,10 +27,10 @@ export default function Home() {
           Rent your room to <br />
           Malayali students, <span className="font-cooper italic underline">easily</span>.
         </p>
-        <p className="text-[14px] text-center opacity-60 font-geist" style={{color: '#0E1B22'}}>
+        <p className="text-[14px] text-center opacity-60 geist-regular" style={{color: '#0E1B22'}}>
           Verified students. Faster fills. Less hassle.
         </p>
-        <p className="w-38 h-10 bg-white text-base font-geist transition duration-300 flex items-center justify-center mt-6 mb-2" 
+        <p className="w-38 h-10 bg-white text-base font-geist-semibold transition duration-300 flex items-center justify-center mt-6 mb-2" 
            style={{
              color: '#00C750',
              borderRadius: '14px',
@@ -73,7 +73,7 @@ export default function Home() {
 
       <div className="w-full bg-[url('/assets/bg.svg')] bg-cover bg-center bg-no-repeat flex flex-col items-center justify-start px-4 pb-6">
         <h3 className="text-[18px] font-cooper font-light italic text-[#0E1B22] pt-[18px]">Interested?</h3>
-        <p className="w-38 h-10 bg-white text-base font-geist transition duration-300 flex items-center justify-center mt-3 mb-4" 
+        <p className="w-38 h-10 bg-white text-base font-geist-semibold transition duration-300 flex items-center justify-center mt-3 mb-4" 
            style={{
              color: '#00C750',
              borderRadius: '14px',
