@@ -39,10 +39,61 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
 node_modules/
 .next/
 *.log
 .DS_Store
 *.otf
 *.ttf
+
+# ====================
+# SECURITY: SSH Keys and Credentials
+# Added: Oct 16, 2025 after SSH key exposure incident
+# Never commit private keys or credentials to version control
+# ====================
+
+# SSH Keys (all formats)
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+*.pub
+authorized_keys
+known_hosts
+.ssh/
+
+# API Keys and Secrets
+secrets/
+*.secret
+*.credentials
+*.token
+
+# Environment files with credentials
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Certificate files
+*.crt
+*.cer
+*.ca-bundle
+*.p12
+*.pfx
+*.p7b
+
+# AWS credentials
+.aws/
+aws-credentials
+
+# Google Cloud credentials
+gcloud-credentials.json
+service-account*.json
+
+# Other credential files
+*.keystore
+*.jks
