@@ -46,28 +46,37 @@ export default function Home() {
       </div>
       <div className="w-full flex flex-col items-center py-10 px-4" style={{backgroundColor: '#DEEDE0'}}>
         <h2 className="text-3xl font-cooper font-light mb-4 text-[18px] underline" style={{color: '#0E1B22'}}>How It Works</h2>
-        <div className="flex flex-col items-end text-center gap-5">
-          <Image 
-            src="/assets/1.svg" 
-            alt="Step 1" 
-            width={1920}
-            height={1080}
-            className="w-auto h-62 unselectable"
-          />
-          <Image 
-            src="/assets/2.svg" 
-            alt="Step 2" 
-            width={1920}
-            height={1080}
-            className="w-auto h-62 unselectable"
-          />
-          <Image 
-            src="/assets/3.svg" 
-            alt="Step 3" 
-            width={1920}
-            height={1080}
-            className="w-auto h-62 unselectable"
-          />        
+        <div className="flex flex-col items-center text-center gap-6 pb-4">
+          <div className="relative w-full flex justify-center pb-6">
+            <Image 
+              src="/assets/1.svg" 
+              alt="Step 1" 
+              width={1920}
+              height={1080}
+              className="w-auto h-62 unselectable"
+            />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">1</div>
+          </div>
+          <div className="relative w-full flex justify-center pb-6">
+            <Image 
+              src="/assets/2.svg" 
+              alt="Step 2" 
+              width={1920}
+              height={1080}
+              className="w-auto h-62 unselectable"
+            />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">2</div>
+          </div>
+          <div className="relative w-full flex justify-center pb-6">
+            <Image 
+              src="/assets/3.svg" 
+              alt="Step 3" 
+              width={1920}
+              height={1080}
+              className="w-auto h-62 unselectable"
+            />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">3</div>
+          </div>        
         </div>
       </div>
 

@@ -3,6 +3,8 @@ import { cooper, geist } from "./fonts";
 import "./globals.css";
 import Head from "next/head";
 
+import { Analytics } from "@vercel/analytics/next"
+
 export const metadata: Metadata = {
   title: "koottu – Rent Out Your Room to Verified Students",
   description: "List your spare room safely and reach genuine students — no clutter, no spam. koottu connects homeowners and students directly through verified WhatsApp listings.",
@@ -119,7 +121,10 @@ export default function RootLayout({
         />
       </Head>
 
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
