@@ -159,7 +159,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
               alt=""
               width={images.pattern.width}
               height={images.pattern.height}
-              className="w-full h-auto"
+              className="w-full h-auto unselectable" // Added unselectable class
             />
           </div>
           
@@ -398,7 +398,7 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 bg-[#0E1B22] text-white text-base font-geist-semibold rounded-[14px] transition duration-300 hover:bg-[#2F4F4F] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full h-[38px] bg-[#0E1B22] text-white text-[14px] font-geist-semibold rounded-[14px] transition duration-300 hover:bg-[#2F4F4F] disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
             style={{ boxShadow: '0px 3px 7px 0px #00C75026' }}
           >
             {isSubmitting ? 'Submitting...' : 'Join the waitlist'}
