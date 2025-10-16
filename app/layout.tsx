@@ -14,7 +14,32 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest"
+  manifest: "/site.webmanifest",
+  openGraph: {
+    title: "koottu – Rent Out Your Room to Verified Students",
+    description:
+      "List your spare room safely and reach genuine students — no clutter, no spam. koottu connects homeowners and students directly through verified WhatsApp listings.",
+    url: "https://koottu.vercel.app", // ← replace with your actual domain
+    siteName: "koottu",
+    images: [
+      {
+        url: "/og-image.jpeg", // must be in /public
+        width: 1200,
+        height: 630,
+        alt: "koottu – Find trusted student tenants near you",
+      },
+    ],
+    locale: "en_IE",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "koottu – Rent Out Your Room to Verified Students",
+    description:
+      "Connect homeowners and students safely through verified WhatsApp listings.",
+    images: ["/og-image.jpeg"],
+  },
 };
 
 export default function RootLayout({
