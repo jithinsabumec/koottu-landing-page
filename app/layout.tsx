@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "koottu",
     images: [
       {
-        url: "/og-image.jpeg", // must be in /public
+        url: "/og-image.jpg", // must be in /public
         width: 1200,
         height: 630,
         alt: "koottu – Find trusted student tenants near you",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "koottu – Rent Out Your Room to Verified Students",
     description:
       "Connect homeowners and students safely through verified WhatsApp listings.",
-    images: ["/og-image.jpeg"],
+    images: ["/og-image.jpg"],
   },
 };
 
