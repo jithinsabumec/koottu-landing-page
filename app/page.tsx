@@ -65,6 +65,7 @@ export default function Home() {
               alt="Step 1" 
               width={1920}
               height={1080}
+              priority
               className="w-auto h-62 unselectable"
             />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">1</div>
@@ -75,6 +76,7 @@ export default function Home() {
               alt="Step 2" 
               width={1920}
               height={1080}
+              priority
               className="w-auto h-62 unselectable"
             />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">2</div>
@@ -85,6 +87,7 @@ export default function Home() {
               alt="Step 3" 
               width={1920}
               height={1080}
+              priority
               className="w-auto h-62 unselectable"
             />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#1BC969] text-white px-[11px] py-[5px] w-[28px] h-[28px] rounded-[10px] border-2 border-white shadow-[0_1px_4px_0_rgba(0,0,0,0.15)] flex items-center justify-center text-base font-geist-medium text-[14px]">3</div>

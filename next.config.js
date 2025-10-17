@@ -24,9 +24,9 @@ const nextConfig = {
             value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none';",
-          },
+  key: 'Content-Security-Policy',
+  value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://script.google.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://r2cdn.perplexity.ai https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none';",
+},
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
